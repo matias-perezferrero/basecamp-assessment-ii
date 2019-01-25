@@ -6,6 +6,11 @@
  */
 
 // CODE HERE
+var me = {
+  firstname: "Matias",
+  age: "25",
+  state: "GA"
+};
 
 /**
  * #2
@@ -15,6 +20,7 @@
  */
 
 // CODE HERE
+me.faveColor = "royal purple"
 
 /**
  * #3
@@ -30,6 +36,7 @@ var message = {
 };
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+message["text"] = "woohoo"
 
 /**
  * #4
@@ -40,6 +47,16 @@ var message = {
  */
 
 // CODE HERE
+var adjustCount = {
+  upVote:function(x){
+      x+=1;
+      return x
+  },
+  downVote:function(y){
+    y-=1;
+    return y
+  }
+}
 
 /**
  * #5
@@ -48,6 +65,7 @@ var message = {
  */
 
 // CODE HERE
+var myFriends = ["Matt","Brian","Michael","Zach"];
 
 /**
  * #6
@@ -56,6 +74,7 @@ var message = {
  */
 
 // CODE HERE
+myFriends.push("Amanda")
 
 /**
  * #7
@@ -68,6 +87,7 @@ var message = {
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+var myArrayCopy = myArray.slice();
 
 /**
  * #8
@@ -81,7 +101,16 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
   // CODE HERE
+  // How would one do this without creating new array? Is there a way to use .splice()?
+  var newArray=[]
+  for(i = 0; i < myNumbers.length; i++) {
+     if ((myNumbers[i] % 2) === 0) {
+        newArray.push(myNumbers[i]);
+    }
+  }
+  return newArray;
 }
+
 
 /**
  * #9
@@ -90,7 +119,11 @@ function evensOnly() {
  * Assign it to a variable called 'trueFriends'.
  */
 
-// CODE HERE
+// CODE HERE 
+//var trueFriends = [];
+var trueFriends = peopleIknow.filter(function(person){return person.friend});
+
+
 var peopleIknow = [
   { name: "Steve", friend: true },
   { name: "Dan", friend: false },
@@ -110,3 +143,12 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+var indexes = [];
+function indexFinder(arr1){
+  for(var i = 0; i < arr1.length; i++){
+    indexes.push(i);
+  }
+  return indexes;
+}
+
+//
