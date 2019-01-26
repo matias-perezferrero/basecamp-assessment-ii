@@ -154,4 +154,5 @@ function indexFinder(arr1){
 }
 
 indexes = indexFinder(randomNumbers);
-//
+
+
