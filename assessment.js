@@ -120,8 +120,7 @@ function evensOnly() {
  */
 
 // CODE HERE 
-//var trueFriends = [];
-var trueFriends = peopleIknow.filter(function(person){return person.friend});
+// Do I need this? -> var trueFriends = [];
 
 
 var peopleIknow = [
@@ -132,6 +131,8 @@ var peopleIknow = [
   { name: "Michelle", friend: false },
   { name: "Holly", friend: true }
 ];
+
+var trueFriends = peopleIknow.filter(function(person){return person.friend});
 
 /**
  * #10
@@ -145,10 +146,12 @@ var peopleIknow = [
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
 var indexes = [];
 function indexFinder(arr1){
+  var anything = [];
   for(var i = 0; i < arr1.length; i++){
-    indexes.push(i);
+    anything.push(i);
   }
-  return indexes;
+  return anything;
 }
 
+indexes = indexFinder(randomNumbers);
 //
